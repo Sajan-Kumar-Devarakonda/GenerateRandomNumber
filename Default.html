@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+    
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="Script.js"></script>
+    <link href="Style.css" rel="stylesheet" />
+</head>
+ 
+<body ng-app ="RandomApp">
+    <form novalidate>
+<div ng-controller="appController"> 
+     
+    <div  class="container">   
+
+   <input type="text" ng-model="Name" id="txtName" name="Name" ng-required="true" placeholder="your name"/>
+
+    
+    <input type="button" id="Submit" ng-click="GenerateRandomValue()"  value="Generate Random Value"/>
+    
+
+    <div class="failure" id="statusmessage" ng-show="showStatus"> {{status}} </div>
+
+  </div>  
+
+</div>
+     </form>
+</body> 
+</html>
